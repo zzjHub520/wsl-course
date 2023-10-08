@@ -2,7 +2,7 @@
 
 ### 1、查看当前环境安装的wsl
 
-```sh
+```cmd
 wsl --list
 ```
 
@@ -10,15 +10,15 @@ wsl --list
 
 ### 2、注销（卸载）当前安装的Linux的Windows子系统
 
-```sh
-wsl --unregister Ubuntu
+```cmd
+wsl --unregister Ubuntu-20.04
 ```
 
 
 
 ### 3、卸载成功，查看当前安装的Linux的Windows子系统
 
-```sh
+```cmd
 wsl --list
 ```
 
@@ -26,20 +26,35 @@ wsl --list
 
 ### 4、查看可安装的Linux的Windows子系统
 
-```sh
+```cmd
 wsl --list --online
+```
+
+
+
+### 5、设置wsl的默认实例
+
+```cmd
+wsl --set-default Ubuntu-20.04
 ```
 
 
 
 # 系统初始化
 
-### 1 安装cmake
+### Linux端口初始化账号和密码，一定要用管理员权限
+
+
+
+### 安装cmake
 
 下载cmake-3.26.4-linux-x86_64.sh
 
 ```sh
-sudo ./cmake-3.26.4-linux-x86_64.sh --prefix=/usr/local/ --skip-license
+# 方法一
+sudo ./cmake-3.26.4-linux-x86_64.sh --prefix=/usr/local/ --skip-license 
+# 方法二
+sudo apt install cmake -y
 ```
 
 
@@ -92,8 +107,6 @@ cmake ..
 make -j
 sudo make install
 ```
-
-
 
 
 
