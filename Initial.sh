@@ -39,5 +39,9 @@ editOnlyOneLine "/etc/xrdp/startwm.sh" "test -x \/etc\/X11\/Xsession && exec \/e
 editOnlyOneLine "/etc/xrdp/startwm.sh" "exec \/bin\/sh \/etc\/X11\/Xsession" "#exec /bin/sh /etc/X11/Xsession"
 editOnlyOneLine "/etc/xrdp/startwm.sh" "===============" "startxfce4"
 
+sudo apt install cmake -y # 安装cmake
+sudo apt install build-essential -y # 安装gcc
+sudo apt install gdb -y # 安装gdb
+
 sudo /etc/init.d/xrdp start
 
