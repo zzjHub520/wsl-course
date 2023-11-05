@@ -12,6 +12,7 @@ wsl --list
 
 ```cmd
 wsl --unregister Ubuntu-20.04
+wsl --unregister kali-linux
 ```
 
 
